@@ -1,8 +1,7 @@
 import { View, TouchableHighlight } from "react-native";
 import React, { useState } from "react";
 import { CustomText } from "../../component";
-import { FONTS_SIZE, FONTWEIGHT } from "../../constant";
-import { HomeStyle } from "../../styles";
+import { HomeStyle as hs } from "../../styles";
 
 export const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,9 +16,9 @@ export const Home = () => {
       onHideUnderlay={handleHover}
       onPress={() => alert("Yala IT Solution")}
     >
-      <View style={HomeStyle.container}>
-        <CustomText style={HomeStyle.title}>Yala IT Solution</CustomText>
-        {isHovered && <CustomText style={HomeStyle.subTitle}>Hello</CustomText>}
+      <View style={hs.container}>
+        <CustomText style={hs.title}>Yala IT Solution</CustomText>
+        {isHovered && <CustomText style={hs.subTitle}>Hello</CustomText>}
       </View>
     </TouchableHighlight>
   );
